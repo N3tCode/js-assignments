@@ -9,7 +9,7 @@ let randomChoice;
 
 /* user inputs a choice for the game rock, paper, scissor */
 
-
+let playerSelection = prompt('Enter your choice.. Rock, Paper, Scissor:');
 
 /* a win or lose result is displayed to the user */
 
@@ -32,7 +32,6 @@ function playRound(playerSelection, computerSelection) {
         return 'Oh man a TIE! Try again stir fry!! :S';
   }
    
-  const playerSelection = 'SCISSOR';
   const computerSelection = getComputerChoice();
   console.log(playRound(playerSelection, computerSelection));
   console.log(computerSelection);

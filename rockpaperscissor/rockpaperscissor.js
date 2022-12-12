@@ -9,6 +9,10 @@ let randomChoice;
 
 /* user inputs a choice for the game rock, paper, scissor */
 
+
+
+/* a win or lose result is displayed to the user */
+
 function playRound(playerSelection, computerSelection) {
     let lowerCasePlayerSelection = playerSelection.toLowerCase();
     console.log(lowerCasePlayerSelection)
@@ -33,5 +37,8 @@ function playRound(playerSelection, computerSelection) {
   console.log(playRound(playerSelection, computerSelection));
   console.log(computerSelection);
 
-/* a score is given to each player after each round */
+/* score is given to each player after each round */
+
+
+
 /* after 5 rounds a winner is declared */

@@ -1,43 +1,50 @@
-/* computer randomly chooses rock, paper, or scissor */
+// the playRound loops until a winner of 5 rounds is determined
+// if player wins, the player is awarded one point which is
+// stored in the playerScore variable
+// if computer wins, the player is awarded one point which is
+// stored in the computerScore variable
 
-function getComputerChoice(randomChoice) {
-    const choices = ['rock', 'paper', 'scissor'];
-    return randomChoice = choices[Math.floor(Math.random() * choices.length)];
+ function game() {
+    for (let i = 0; i < 5; i++) {
+
+     }
 }
 
-let randomChoice;
+// computer randomly chooses rock, paper, or scissor
 
-/* user inputs a choice for the game rock, paper, scissor */
+function getComputerChoice() {
+    const choices = ['rock', 'paper', 'scissor'];
+    return choices[Math.floor(Math.random() * choices.length)];
+}
+
+// user inputs a choice for the game rock, paper, scissor
 
 let playerSelection = prompt('Enter your choice.. Rock, Paper, Scissor:');
 
-/* a win or lose result is displayed to the user */
+// a round is played between the player and computer with a win or lose result returned */
 
 function playRound(playerSelection, computerSelection) {
     let lowerCasePlayerSelection = playerSelection.toLowerCase();
-    console.log(lowerCasePlayerSelection)
-    if (lowerCasePlayerSelection === 'rock' && computerSelection === 'paper')
-        return 'You LOSE! Paper beats Rock :(';
-        else if (lowerCasePlayerSelection === 'rock' && computerSelection === 'scissor')
-        return 'You WIN! Rock beats Scissor :)';
-        else if (lowerCasePlayerSelection === 'paper' && computerSelection === 'rock')
-        return 'You WIN! Paper beats Rock :)';
-        else if (lowerCasePlayerSelection === 'paper' && computerSelection === 'scissor')
-        return 'You LOSE! Scissor beats Paper :(';
-        else if (lowerCasePlayerSelection === 'scissor' && computerSelection === 'rock')
-        return 'You LOSE! Rock beats Scissor :(';
-        else if (lowerCasePlayerSelection === 'scissor' && computerSelection === 'paper')
-        return 'You WIN! Scissor beats Paper :)';
-        else if (lowerCasePlayerSelection === computerSelection)
+    console.log(lowerCasePlayerSelection);
+    let computerWin = (`You LOSE! ${computerSelection} beats ${playerSelection}`);
+    let playerWin = (`You WIN! ${playerSelection} beats ${computerSelection}`)
+    if (lowerCasePlayerSelection === 'rock' && computerSelection === 'paper') {
+        return computerWin;
+    }   else if (lowerCasePlayerSelection === 'rock' && computerSelection === 'scissor') {
+        return playerWin;
+    }   else if (lowerCasePlayerSelection === 'paper' && computerSelection === 'rock') {
+        return playerWin;
+    }   else if (lowerCasePlayerSelection === 'paper' && computerSelection === 'scissor') {
+        return computerWin;
+    }   else if (lowerCasePlayerSelection === 'scissor' && computerSelection === 'rock') {
+        return computerWin;
+    }   else if (lowerCasePlayerSelection === 'scissor' && computerSelection === 'paper') {
+        return playerWin;
+    }   else if (lowerCasePlayerSelection === computerSelection) {
         return 'Oh man a TIE! Try again stir fry!! :S';
+    }   else alert('What the chocolate chip! That\'s not a choice for this game. Please try again friend. :)');
   }
-   
-  const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
-  console.log(computerSelection);
 
-/* score is given to each player after each round */
-
-
-
-/* after 5 rounds a winner is declared */
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+console.log(computerSelection);

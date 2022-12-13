@@ -3,10 +3,11 @@
 // stored in the playerScore variable
 // if computer wins, the player is awarded one point which is
 // stored in the computerScore variable
+console.log(game());
 
  function game() {
     for (let i = 0; i < 5; i++) {
-
+        console.log(playRound());
      }
 }
 
@@ -19,13 +20,16 @@ function getComputerChoice() {
 
 // user inputs a choice for the game rock, paper, scissor
 
-let playerSelection = prompt('Enter your choice.. Rock, Paper, Scissor:');
+//let playerSelection = prompt('Enter your choice.. Rock, Paper, Scissor:','');
 
 // a round is played between the player and computer with a win or lose result returned */
 
 function playRound(playerSelection, computerSelection) {
+    playerSelection = prompt('Enter your choice.. Rock, Paper, Scissor:','');
+    computerSelection = getComputerChoice();
     let lowerCasePlayerSelection = playerSelection.toLowerCase();
     console.log(lowerCasePlayerSelection);
+    console.log(computerSelection);
     let computerWin = (`You LOSE! ${computerSelection} beats ${playerSelection}`);
     let playerWin = (`You WIN! ${playerSelection} beats ${computerSelection}`)
     if (lowerCasePlayerSelection === 'rock' && computerSelection === 'paper') {
@@ -45,6 +49,6 @@ function playRound(playerSelection, computerSelection) {
     }   else alert('What the chocolate chip! That\'s not a choice for this game. Please try again friend. :)');
   }
 
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-console.log(computerSelection);
+//const computerSelection = getComputerChoice();
+//console.log(playRound(playerSelection, computerSelection));
+//console.log(computerSelection);

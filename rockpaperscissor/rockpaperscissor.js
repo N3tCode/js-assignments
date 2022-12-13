@@ -8,6 +8,20 @@ console.log(game());
  function game() {
     for (let i = 0; i < 5; i++) {
         console.log(playRound());
+        let playerScore = 0;
+        if (playerWin) {
+            ++playerScore;
+            if (playerScore = 5) {
+                return 'You DEFEATED the computer!';
+            }
+        }
+        let computerScore = 0;
+        if (computerWin) {
+            ++computerScore;
+            if (computerScore = 5) {
+                return 'You have been DEFEATED by the computer!';
+            }
+        }
      }
 }
 

@@ -2,9 +2,32 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>rockpaperscissor</title>
+  <title>Rock Paper Scissor</title>
+  <script src="rockpaperscissor.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <script src="rockpaperscissor.js"></script>
+  <div class="header">
+    <h1 id="myHeader">Rock Paper Scissor</h1>
+    <h3 id="instructions">Make your Decision</h3>
+  </div>
+  <div class="body">
+    <div class="choices">
+      <div class="button" id="rock">Rock</div>
+      <div class="button" id="paper">Paper</div>
+      <div class="button" id="scissor">Scissor</div>
+    </div>
+    <div class="gameResults">
+      <div id="gameTextBox"></div>
+    </div>
+    <div class="scoreboard">
+      <h3 id="score">Score</h3>
+      <div id="playerScore"><h4>You</h4></div>
+      <div id="computerScore"><h4>Computer</h4></div>
+    </div>
+    <div class="button">
+      <div id="resetButton"></div>
+    </div>
+  </div>
 </body>
 </html>

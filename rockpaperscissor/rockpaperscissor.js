@@ -10,7 +10,6 @@ let computerScore = 0;
 // stored in the computerScore variable
 // after 5 rounds a winner is declared
 
-game();
 
  function game() {
     for (let i = 0; i < 5; i++) {
@@ -38,25 +37,49 @@ function getComputerChoice() {
 // and a point added to the round winner's score
 
 function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt('Enter your choice.. Rock, Paper, Scissor:','').toLowerCase();
-    computerSelection = getComputerChoice();
     console.log(playerSelection);
     console.log(computerSelection);
-    let computerWin = (`You LOSE! ${computerSelection} beats ${playerSelection}`);
-    let playerWin = (`You WIN! ${playerSelection} beats ${computerSelection}`);
     if (playerSelection === 'rock' && computerSelection === 'paper') {
-        return (computerWin + ++computerScore);
+        return (computerRoundWin(playerSelection, computerSelection) + ++computerScore);
     }   else if (playerSelection === 'rock' && computerSelection === 'scissor') {
-        return (playerWin + ++playerScore);
+        return (playerRoundWin(playerSelection, computerSelection) + ++playerScore);
     }   else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        return (playerWin + ++playerScore);
+        return (playerRoundWin(playerSelection, computerSelection) + ++playerScore);
     }   else if (playerSelection === 'paper' && computerSelection === 'scissor') {
-        return (computerWin + ++computerScore);
+        return (computerRoundWin(playerSelection, computerSelection) + ++computerScore);
     }   else if (playerSelection === 'scissor' && computerSelection === 'rock') {
-        return (computerWin + ++computerScore);
+        return (computerRoundWin(playerSelection, computerSelection) + ++computerScore);
     }   else if (playerSelection === 'scissor' && computerSelection === 'paper') {
-        return (playerWin + ++playerScore);
+        return (playerRoundWin(playerSelection, computerSelection) + ++playerScore);
     }   else if (playerSelection === computerSelection) {
-        return 'Oh man a TIE! Try again stir fry!! :S';
-    }   else alert('What the chocolate chip! That\'s not a choice for this game. Please try again friend. :)');
+        return (roundTie());
+    }
   }
+
+function playerRoundWin(playerSelection, computerSelection) {
+    console.log(`You WIN! ${playerSelection} beats ${computerSelection}`);
+}
+
+function computerRoundWin(playerSelection, computerSelection) {
+    console.log(`You LOSE! ${computerSelection} beats ${playerSelection}`);
+}
+
+function roundTie() {
+    console.log('Oh man a TIE! Try again stir fry!! :S');
+}
+
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+    playRound('rock', getComputerChoice());
+});
+
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () => {
+    playRound('paper', getComputerChoice());
+});
+
+const scissor = document.querySelector('#scissor');
+paper.addEventListener('click', () => {
+    playRound('scissor', getComputerChoice());
+});
+

@@ -7,27 +7,35 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div class="container">
   <div class="header">
     <h1 id="myHeader">Rock Paper Scissor</h1>
     <h3 id="instructions">Make your Decision</h3>
+    <h3 id="instructions">Best out of 5 WINS!</h3>
   </div>
-  <div class="body">
+  <div class="content">
     <div class="choices">
-      <div class="button" id="rock">Rock</div>
-      <div class="button" id="paper">Paper</div>
-      <div class="button" id="scissor">Scissor</div>
+      <div class="button" id="rock"><button><img src="images/rock.png"></button></div>
+      <div class="button" id="paper"><button><img src="images/paper.png"></button></div>
+      <div class="button" id="scissor"><button><img src="images/scissor.png"></button></div>
     </div>
     <div class="gameResults">
       <div id="gameTextBox"></div>
     </div>
-    <div class="scoreboard">
-      <h3 id="score">Score</h3>
-      <div id="playerScore"><h4>You</h4></div>
-      <div id="computerScore"><h4>Computer</h4></div>
+    <div class="scoreContainer">
+      <div class="scoreLabels">
+        <div id="playerLabel"><h4>Player:</h4></div>
+        <div id="computerLable"><h4>Computer:</h4></div>
+      </div>
+      <div class="scoreNumbers">
+          <div id="playerScore"></div>
+          <div id="computerScore"></div>       
+      </div>
     </div>
-    <div class="button">
-      <div id="resetButton"></div>
+    <div class="resetButton">
+      <div class="button2" id="resetButton"><button>Play Again</button></div>
     </div>
+  </div>
   </div>
 </body>
 </html>

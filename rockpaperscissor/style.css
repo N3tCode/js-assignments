@@ -1,0 +1,109 @@
+
+body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: gainsboro;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#myHeader {
+
+}
+
+#instructions {
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choices {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    padding: 20px;
+}
+
+button {
+    border: none;
+    padding: 0;
+    background: none;
+    color: white;
+}
+
+.gameResults {
+    border: black;
+    border:5px solid;
+    height: 50px;
+    width: 100%;
+}
+
+#gameTextBox {
+    
+}
+
+.scoreContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.scoreLabels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.scoreNumbers {
+    display: flex;
+    flex-direction: row;
+}
+
+#playerScore {
+    border: black;
+    border:5px solid;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+#computerScore {
+    border: black;
+    border:5px solid;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+.resetButton {
+    padding: 25px;
+}
+
+#resetButton {
+    background-color: tan;
+    padding: 10px 24px;
+    border-radius: 8px;
+    color: white;
+}

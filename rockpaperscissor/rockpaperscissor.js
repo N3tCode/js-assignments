@@ -79,7 +79,7 @@ paper.addEventListener('click', () => {
 });
 
 const scissor = document.querySelector('#scissor');
-paper.addEventListener('click', () => {
+scissor.addEventListener('click', () => {
     playRound('scissor', getComputerChoice());
 });
 

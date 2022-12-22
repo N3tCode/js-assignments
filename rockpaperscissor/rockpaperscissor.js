@@ -57,15 +57,18 @@ function playRound(playerSelection, computerSelection) {
   }
 
 function playerRoundWin(playerSelection, computerSelection) {
-    console.log(`You WIN! ${playerSelection} beats ${computerSelection}`);
+    gameTextBox.textContent = (`You WIN! ${playerSelection} beats ${computerSelection}`);
+    gameResults.appendChild(gameTextBox);
 }
 
 function computerRoundWin(playerSelection, computerSelection) {
-    console.log(`You LOSE! ${computerSelection} beats ${playerSelection}`);
+    gameTextBox.textContent = (`You LOSE! ${computerSelection} beats ${playerSelection}`);
+    gameResults.appendChild(gameTextBox);
 }
 
 function roundTie() {
-    console.log('Oh man a TIE! Try again stir fry!! :S');
+    gameTextBox.textContent = ('Oh man a TIE! Try again stir fry!! :S');
+    gameResults.appendChild(gameTextBox);
 }
 
 const rock = document.querySelector('#rock');
@@ -83,3 +86,6 @@ scissor.addEventListener('click', () => {
     playRound('scissor', getComputerChoice());
 });
 
+const gameResults = document.querySelector('.gameResults');
+const gameTextBox = document.createElement('div');
+gameTextBox.classList.add('gameTextBox')

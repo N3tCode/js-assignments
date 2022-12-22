@@ -24,10 +24,6 @@ body {
     align-items: center;
 }
 
-#myHeader {
-
-}
-
 #instructions {
     margin: 0;
 }
@@ -40,11 +36,29 @@ body {
 
 .choices {
     display: flex;
-    align-items: center;
+    padding: 25px;
 }
 
 .button {
-    padding: 20px;
+    padding: 15px;
+}
+
+#rock {
+    background: url(images/rock.png);
+    height: 150px;
+    width: 150px;
+}
+
+#paper {
+    background: url(images/paper.png);
+    height: 150px;
+    width: 150px;
+}
+
+#scissor {
+    background: url(images/scissor.png);
+    height: 150px;
+    width: 150px;
 }
 
 button {
@@ -55,14 +69,19 @@ button {
 }
 
 .gameResults {
+    display: flex;
+    justify-content: center;
     border: black;
     border:5px solid;
-    height: 50px;
-    width: 100%;
+    height: 2.5em;
+    width: 30em;
 }
 
-#gameTextBox {
-    
+.gameTextBox {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
 }
 
 .scoreContainer {

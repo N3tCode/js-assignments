@@ -98,22 +98,36 @@ button {
 .scoreNumbers {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 #playerScore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: black;
     border:5px solid;
     height: 100px;
     width: 100px;
     margin: 10px;
+    font-size: 2.5em;
 }
 
 #computerScore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: black;
     border:5px solid;
     height: 100px;
     width: 100px;
     margin: 10px;
+    font-size: 2.5em;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
 }
 
 .resetButton {

@@ -9,30 +9,7 @@
 // a round is played between the player and computer with a win or lose result returned
 // and a point added to the round winner's score
 
- function gameEnd() {
-    if (playerScore === 5) {
-        gameTextBox.textContent = ('You\'ve done it!!! Machine\'s drool, People rule!');
-        gameResults.appendChild(gameTextBox);
-        disableButton();
-    } else if (computerScore === 5) {
-        gameTextBox.textContent = ('You\'ve didn\'t done it!!! People drool, Machine\'s rule!');
-        gameResults.appendChild(gameTextBox);
-        disableButton();
-    } else if (playerScore == 5 & computerScore == 5) {
-        gameTextBox.textContent = ('Well this is embarrassing... It\'s a tie. :/')
-        disableButton();
-    }
-}
-
-// computer randomly chooses rock, paper, or scissor
-
-function getComputerChoice() {
-    const choices = ['rock', 'paper', 'scissor'];
-    return choices[Math.floor(Math.random() * choices.length)];
-}
-
-
-
+ 
 // round choices
 const rock = document.querySelector('#rock');
 rock.addEventListener('click', () => {
@@ -58,11 +35,13 @@ function disableButton() {
     }
 }
 
-var res = document.querySelectorAll("#div,#par,#head");
-for (var i = 0; i < res.length; i++){
- res[i].style.backgroundColor = '#DCDCDC'
-}
+// computer randomly chooses rock, paper, or scissor
 
+function getComputerChoice() {
+    const choices = ['rock', 'paper', 'scissor'];
+    return choices[Math.floor(Math.random() * choices.length)];
+
+}
 // round conditions
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === 'rock' && computerSelection === 'paper') {
@@ -126,3 +105,19 @@ const computerScoreNum = document.createElement('div');
 computerScoreNum.classList.add('score');
 computerScoreNum.textContent = computerScore;
 computerScoreBoard.appendChild(computerScoreNum);
+
+// game end conditions
+function gameEnd() {
+    if (playerScore === 5) {
+        gameTextBox.textContent = ('You\'ve done it!!! Machine\'s drool, People rule!');
+        gameResults.appendChild(gameTextBox);
+        disableButton();
+    } else if (computerScore === 5) {
+        gameTextBox.textContent = ('You\'ve didn\'t done it!!! People drool, Machine\'s rule!');
+        gameResults.appendChild(gameTextBox);
+        disableButton();
+    } else if (playerScore == 5 & computerScore == 5) {
+        gameTextBox.textContent = ('Well this is embarrassing... It\'s a tie. :/')
+        disableButton();
+    }
+}

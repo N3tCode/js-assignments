@@ -121,3 +121,13 @@ function gameEnd() {
         disableButton();
     }
 }
+
+// game reset button
+
+const resetButton = document.querySelector('#resetButton');
+resetButton.addEventListener('click', resButton)
+
+function resButton() {
+  location.reload();
+}
+

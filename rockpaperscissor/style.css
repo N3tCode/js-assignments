@@ -71,9 +71,10 @@ button {
 .gameResults {
     display: flex;
     justify-content: center;
+    align-items: center;
     border: black;
     border:5px solid;
-    height: 2.5em;
+    height: 80px;
     width: 30em;
 }
 
